@@ -1,0 +1,38 @@
+{
+    "generator-jhipster": {
+        "promptValues": {
+            "packageName": "com.jhipster.fuse",
+            "nativeLanguage": "en"
+        },
+        "jhipsterVersion": "5.8.2",
+        "applicationType": "monolith",
+        "baseName": "jhifuse",
+        "packageName": "com.jhipster.fuse",
+        "packageFolder": "com/jhipster/fuse",
+        "serverPort": "8080",
+        "authenticationType": "jwt",
+        "cacheProvider": "ehcache",
+        "enableHibernateCache": true,
+        "websocket": "spring-websocket",
+        "databaseType": "sql",
+        "devDatabaseType": "h2Disk",
+        "prodDatabaseType": "postgresql",
+        "searchEngine": false,
+        "messageBroker": false,
+        "serviceDiscoveryType": false,
+        "buildTool": "maven",
+        "enableSwaggerCodegen": false,
+        "jwtSecretKey": "MjM5ZDI4YWJlOWZiZTIyMjUzNTQyZjhlNDM5NjRmYzcyZTI1YmMxZWNlZjU3NjdmZGM1ZmIyMzE1NWYxYjM0NWM5ZjMyZGU3YWIzNmUwNjlkMjI3NjAzZjBhMGUyYmJkMjAwMmZmYzY3NzZhOWI4ZDEzMGZmYzlmYjI0YjMyMTE=",
+        "clientFramework": "angularX",
+        "useSass": true,
+        "clientPackageManager": "npm",
+        "testFrameworks": ["gatling", "cucumber", "protractor"],
+        "jhiPrefix": "jhi",
+        "entitySuffix": "",
+        "dtoSuffix": "DTO",
+        "otherModules": [],
+        "enableTranslation": true,
+        "nativeLanguage": "en",
+        "languages": ["en"]
+    }
+}
