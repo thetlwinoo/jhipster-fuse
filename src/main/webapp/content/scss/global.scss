@@ -1,4 +1,7 @@
-@import 'bootstrap-variables';
+@import 'src/main/webapp/@fuse/scss/core';
+@import 'src/main/webapp/app/app.theme';
+
+// @import 'bootstrap-variables';
 
 /* ==============================================================
 Bootstrap tweaks
@@ -52,7 +55,7 @@ Generic styles
 
 .jh-card {
     padding: 1.5%;
-    margin-top: 20px;
+    // margin-top: 20px;
     border: none;
 }
 

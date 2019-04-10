@@ -21,6 +21,17 @@ import * as moment from 'moment';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ActiveMenuDirective, ErrorComponent } from './layouts';
 
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { MatButtonModule, MatIconModule } from '@angular/material';
+import { TranslateModule } from '@ngx-translate/core';
+import 'hammerjs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FuseModule } from '@fuse/fuse.module';
+import { FuseSharedModule } from '@fuse/shared.module';
+import { FuseProgressBarModule, FuseSidebarModule, FuseThemeOptionsModule } from '@fuse/components';
+import { LayoutModule } from 'app/fuse-layout/layout.module';
+import { fuseConfig } from 'app/fuse-config';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -38,7 +49,27 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
         JhifuseAccountModule,
         // jhipster-needle-angular-add-module JHipster will add new module here
         JhifuseEntityModule,
-        JhifuseAppRoutingModule
+        JhifuseAppRoutingModule,
+
+        BrowserAnimationsModule,
+
+        // Material moment date module
+        MatMomentDateModule,
+
+        // Material
+        MatButtonModule,
+        MatIconModule,
+
+        // TranslateModule.forRoot(),
+        FuseModule.forRoot(fuseConfig),
+
+        FuseProgressBarModule,
+        FuseSharedModule,
+        FuseSidebarModule,
+        FuseThemeOptionsModule,
+
+        // App modules
+        LayoutModule
     ],
     declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
     providers: [

@@ -12,6 +12,7 @@ module.exports = (options) => ({
         modules: ['node_modules'],
         alias: {
             app: utils.root('src/main/webapp/app/'),
+            '@fuse': utils.root('src/main/webapp/@fuse/'),
             ...rxPaths()
         }
     },
@@ -26,9 +27,9 @@ module.exports = (options) => ({
                 options: {
                     minimize: true,
                     caseSensitive: true,
-                    removeAttributeQuotes:false,
-                    minifyJS:false,
-                    minifyCSS:false
+                    removeAttributeQuotes: false,
+                    minifyJS: false,
+                    minifyCSS: false
                 },
                 exclude: /(src\/main\/webapp\/index.html)/
             },
@@ -74,13 +75,15 @@ module.exports = (options) => ({
             { from: './src/main/webapp/content/', to: 'content' },
             { from: './src/main/webapp/favicon.ico', to: 'favicon.ico' },
             { from: './src/main/webapp/manifest.webapp', to: 'manifest.webapp' },
+            { from: './src/main/webapp/content/fuse/', to: 'content/fuse/' },
             // jhipster-needle-add-assets-to-webpack - JHipster will add/remove third-party resources in this array
             { from: './src/main/webapp/robots.txt', to: 'robots.txt' }
         ]),
         new MergeJsonWebpackPlugin({
             output: {
                 groupBy: [
-                    { pattern: "./src/main/webapp/i18n/en/*.json", fileName: "./i18n/en.json" }
+                    { pattern: "./src/main/webapp/i18n/en/*.json", fileName: "./i18n/en.json" },
+                    { pattern: "./src/main/webapp/i18n/my/*.json", fileName: "./i18n/my.json" }
                     // jhipster-needle-i18n-language-webpack - JHipster will add/remove languages in this array
                 ]
             }
